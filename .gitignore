@@ -32,7 +32,6 @@ Thumbs.db
 
 # Data files
 *.csv
-*.json
 *.xlsx
 *.db
 *.sqlite3
