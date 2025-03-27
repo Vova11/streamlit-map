@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+.Python
+
+# VSCode
+.vscode/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Data files
+*.csv
+*.json
+*.xlsx
+*.db
+*.sqlite3
+
+# Env variables
+.env
+
+# IDEs
+.idea/
+*.iml
+
+# Pytest cache
+.pytest_cache/
+
+# Streamlit logs
+.streamlit/logs/
+
+# Package management
+poetry.lock
+Pipfile.lock
+``
