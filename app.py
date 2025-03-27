@@ -15,6 +15,10 @@ try:
     df = pd.DataFrame(data)
 
     st.title(f"🗺️ Property Map with Tooltips - {length} listings")
+    st.markdown("Streamlit + PyDeck")
+    st.markdown("FastAPI + SQLAlchemy + Alembic + PostgreSQL")
+    st.markdown("SQL data clean up, transformation, and loading into PostgreSQL")
+    
     
     if not df.empty and "latitude" in df.columns and "longitude" in df.columns:
         st.success("✅ Properties loaded successfully!")
