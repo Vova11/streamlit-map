@@ -6,7 +6,7 @@ import pydeck as pdk
 st.set_page_config(page_title="Property Map", layout="wide")
 
 try:
-    with open("data.json", "r") as f:
+    with open("data_v2.json", "r") as f:
         raw_data = json.load(f)
 
     
