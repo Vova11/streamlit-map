@@ -1,5 +1,5 @@
 {
-  "length": 144,
+  "length": 151,
   "data": [
     {
       "latitude": 48.14246095,
@@ -1067,6 +1067,21 @@
       "pt_category": "🔴 Pricey"
     },
     {
+      "latitude": 48.202306,
+      "property_id": 13205,
+      "street": "Martina Granca, Bratislava IV, Bratislava-Dúbravka",
+      "district": "Bratislava IV",
+      "price_per_meter": 4334.58,
+      "pt_ratio": 1.22,
+      "url": "https://www.nehnutelnosti.sk/detail/Jus7aqNYdb-/vyskusaj-svoje-nove-byvanie-v-stvor-izbovom-mezonete",
+      "city": "Bratislava IV",
+      "title": "Vyskúšaj svoje nové bývanie v štvor-izbovom mezonete",
+      "longitude": 17.017935625690484,
+      "room_category": "4",
+      "median_ppm": 3543.04,
+      "pt_category": "🔴 Pricey"
+    },
+    {
       "latitude": 48.14657425,
       "property_id": 845,
       "street": "Podunajská, Bratislava II, Bratislava-Podunajské Biskupice",
@@ -1217,6 +1232,51 @@
       "pt_category": "🔴 Pricey"
     },
     {
+      "latitude": 48.155136999999996,
+      "property_id": 14347,
+      "street": "Záhradnícka, Bratislava I, Bratislava-Staré Mesto",
+      "district": "Bratislava I",
+      "price_per_meter": 5521.33,
+      "pt_ratio": 1.22,
+      "url": "https://www.nehnutelnosti.sk/detail/Juij0Kc7st0/predaj-vynimocnyl-zrekonstruovany-3-izbovy-bytl-bratislava-stare-mesto",
+      "city": "Bratislava I",
+      "title": "PREDAJ-VÝNIMOČNÝ, ZREKONŠTRUOVANÝ 3-IZBOVÝ BYT, BRATISLAVA-STARÉ MESTO",
+      "longitude": 17.101020814713085,
+      "room_category": "3",
+      "median_ppm": 4508.2,
+      "pt_category": "🔴 Pricey"
+    },
+    {
+      "latitude": 48.12273999999999,
+      "property_id": 14349,
+      "street": "Martinčekova, Bratislava II, Bratislava-Ružinov",
+      "district": "Bratislava II",
+      "price_per_meter": 4533.33,
+      "pt_ratio": 1.13,
+      "url": "https://www.nehnutelnosti.sk/detail/Ju9KNU9LZkM/kompletne-zrekonstruovany-a-plne-zariadeny-2-izbovy-byt-vo-vyhladavanej-lokalite-v-sirsom-centre",
+      "city": "Bratislava II",
+      "title": "Kompletne zrekonštruovaný a plne zariadený 2 izbový byt vo vyhľadávanej lokalite v širšom centre",
+      "longitude": 17.210335029933493,
+      "room_category": "2",
+      "median_ppm": 4017.86,
+      "pt_category": "🔴 Pricey"
+    },
+    {
+      "latitude": 48.074586,
+      "property_id": 14350,
+      "street": "Námestie hraničiarov, Bratislava V, Bratislava-Petržalka",
+      "district": "Bratislava V",
+      "price_per_meter": 4740.74,
+      "pt_ratio": 0.91,
+      "url": "https://www.nehnutelnosti.sk/detail/JutRMJ88TbD/zrekonstruovana-garsonka-s-loggiou-vo-vybornej-lokalite-na-zaciatku-petrzalky-",
+      "city": "Bratislava V",
+      "title": "Zrekonštruovaná garsónka s loggiou vo výbornej lokalite na začiatku Petržalky",
+      "longitude": 17.115642477944665,
+      "room_category": "Garáž",
+      "median_ppm": 5211.28,
+      "pt_category": "🟡 Normal"
+    },
+    {
       "latitude": 48.145925124268665,
       "property_id": 13646,
       "street": "Telocvičná, Bratislava II, Bratislava-Ružinov",
@@ -1287,6 +1347,36 @@
       "city": "Bratislava II",
       "title": "U NÁS !!! MODERNÝ 2i byt, NOVOSTAVBA NOVÝ RUŽINOV, KLÍMA, BALKÓN, Bajkálska ulica",
       "longitude": 17.148810295841137,
+      "room_category": "2",
+      "median_ppm": 4017.86,
+      "pt_category": "🔴 Pricey"
+    },
+    {
+      "latitude": 48.202306,
+      "property_id": 14373,
+      "street": "Sološnická, Bratislava IV, Bratislava-Karlova Ves",
+      "district": "Bratislava IV",
+      "price_per_meter": 4307.34,
+      "pt_ratio": 1.61,
+      "url": "https://www.nehnutelnosti.sk/detail/JuQ8zlKZPjz/moderny-rodinny-dom-v-lukrativnej-lokalite",
+      "city": "Bratislava IV",
+      "title": "Moderný rodinný dom v lukratívnej lokalite.",
+      "longitude": 17.017935625690484,
+      "room_category": "Rodinný dom",
+      "median_ppm": 2682.995,
+      "pt_category": "🔴 Pricey"
+    },
+    {
+      "latitude": 48.12273999999999,
+      "property_id": 14374,
+      "street": "Jégého, Bratislava II, Bratislava-Ružinov",
+      "district": "Bratislava II",
+      "price_per_meter": 4903.85,
+      "pt_ratio": 1.22,
+      "url": "https://www.nehnutelnosti.sk/detail/Ju_mFQMHNnO/slnecny-2-izb-byt-v-ziadanej-lokalite-jegeho-alej",
+      "city": "Bratislava II",
+      "title": "Slnečný 2-izb. byt v žiadanej lokalite Jégeho Alej",
+      "longitude": 17.210335029933493,
       "room_category": "2",
       "median_ppm": 4017.86,
       "pt_category": "🔴 Pricey"
@@ -1424,6 +1514,21 @@
       "longitude": 17.210335029933493,
       "room_category": "Rodinný dom",
       "median_ppm": 2870.37,
+      "pt_category": "🔴 Pricey"
+    },
+    {
+      "latitude": 48.074586,
+      "property_id": 13220,
+      "street": "Švabinského 17, Bratislava V, Bratislava-Petržalka",
+      "district": "Bratislava V",
+      "price_per_meter": 3808.57,
+      "pt_ratio": 1.15,
+      "url": "https://www.nehnutelnosti.sk/detail/JuTYyiyP-hq/byt---3-izbovy---105-m2---bratislava-v---petrzalkal-svabinskeho-ulica",
+      "city": "Bratislava V",
+      "title": "BYT - 3 izbový - 105 M2 - BRATISLAVA V. - Petržalka, Švabinského ulica",
+      "longitude": 17.115642477944665,
+      "room_category": "3",
+      "median_ppm": 3300.33,
       "pt_category": "🔴 Pricey"
     },
     {
