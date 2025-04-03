@@ -86,7 +86,6 @@ try:
                 tooltip=tooltip
             ))
 
-            # --- Property viewer below the map ---
             st.subheader("🏡 Selected Property Preview")
 
             selected_title = st.selectbox("Choose a property to preview:", options=filtered_df["title"])
