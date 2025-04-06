@@ -24,10 +24,11 @@ try:
         # Sidebar filters
         st.sidebar.header("🔍 Search Filters")
 
+        # Dynamic dropdowns from actual data
         cities = sorted(df["city"].dropna().unique().tolist())
         selected_cities = st.sidebar.multiselect("Cities", options=cities)
 
-        deal_options = ["🟢 Deal", "🟡 Normal", "🔴 Pricey"]
+        deal_options = sorted(df["pt_category"].dropna().unique().tolist())
         selected_deals = st.sidebar.multiselect("Price Categories", options=deal_options)
 
         room_categories = sorted(df["room_category"].dropna().unique().tolist())
@@ -86,31 +87,35 @@ try:
                 tooltip=tooltip
             ))
 
-            st.subheader("🏡 Selected Property Preview")
+            # Display in a styled container
+            st.subheader("🏠 Property Listings")
 
-            selected_title = st.selectbox("Choose a property to preview:", options=filtered_df["title"])
+            # Pagination setup
+            page_size = 20
+            total_properties = len(filtered_df)
+            total_pages = (total_properties - 1) // page_size + 1
 
-            selected_property = filtered_df[filtered_df["title"] == selected_title].iloc[0]
+            # Create page selector
+            current_page = st.number_input("Page", min_value=1, max_value=total_pages, value=1, step=1)
 
-            st.markdown(f"### {selected_property['title']}")
-            st.markdown(f"**City:** {selected_property['city']}")
-            st.markdown(f"**District:** {selected_property['district']}")
-            st.markdown(f"**Price per m²:** {selected_property['price_per_meter']} €")
-            st.markdown(f"**Rooms:** {selected_property['room_category']}")
-            st.markdown(f"**Deal Type:** {selected_property['pt_category']}")
-            st.markdown(f"[🔗 Open Listing]({selected_property['url']})")
+            # Calculate indices for slicing
+            start_idx = (current_page - 1) * page_size
+            end_idx = start_idx + page_size
 
-            # Show image if available
-            image_url = selected_property.get("url", "")
-            if image_url and image_url.lower() != "none":
-                st.image(image_url, use_container_width=True)
-            else:
-                st.info("ℹ️ No image available for this property.")
+            # Display paginated listings
+            for _, row in filtered_df.iloc[start_idx:end_idx].iterrows():
+                title = row["title"]
+                url = row["url"]
+                st.markdown(f"- [{title}]({url})", unsafe_allow_html=True)
+
+            # Optional info
+            st.caption(f"Showing {start_idx + 1}-{min(end_idx, total_properties)} of {total_properties} properties")
+            
+            
+            
+                        
         else:
-            st.warning("⚠️ No properties match the selected filters.")
-
-    else:
-        st.warning("⚠️ No data with valid coordinates.")
+            st.warning("⚠️ No data with valid coordinates.")
 
 except Exception as e:
     st.error("❌ Could not load property data.")
