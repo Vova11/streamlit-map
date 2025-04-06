@@ -34,6 +34,20 @@ try:
         room_categories = sorted(df["room_category"].dropna().unique().tolist())
         selected_rooms = st.sidebar.multiselect("Room Categories", options=room_categories)
 
+        # 📈 Price Versions Slider
+        if "price_versions" in df.columns:
+            min_version = int(df["price_versions"].min())
+            max_version = int(df["price_versions"].max())
+
+            selected_versions = st.sidebar.slider(
+                "Number of Price Changes",
+                min_value=min_version,
+                max_value=max_version,
+                value=(min_version, max_version)
+            )
+        else:
+            selected_versions = None
+
         # Filter data
         filtered_df = df.copy()
         if selected_cities:
@@ -42,8 +56,19 @@ try:
             filtered_df = filtered_df[filtered_df["pt_category"].isin(selected_deals)]
         if selected_rooms:
             filtered_df = filtered_df[filtered_df["room_category"].isin(selected_rooms)]
+        if selected_versions and selected_versions != (min_version, max_version):
+            filtered_df = filtered_df[
+                filtered_df["price_versions"].between(*selected_versions)
+            ]
 
         st.subheader(f"Filtered Properties: {len(filtered_df)}")
+
+        # Show price trend columns if filtered by price_versions
+        if selected_versions and selected_versions != (min_version, max_version):
+            st.subheader("📉 Price Trend Analysis")
+            st.dataframe(
+                filtered_df[["title", "price_change_percent", "price_trend_message"]]
+            )
 
         with st.expander("📋 Property Data"):
             st.dataframe(filtered_df)
@@ -65,7 +90,9 @@ try:
                 "html": """
                     <b>{title}</b><br/>
                     💶 {price_per_meter} €/m²<br/>
-                    🛏️ {room_category} rooms <br/>
+                    📈 Max Price: {max_price} €<br/>
+                    📉 Min Price: {min_price} €<br/>
+                    🛏️ {room_category} rooms<br/>
                     {pt_category}
                 """,
                 "style": {
@@ -73,6 +100,7 @@ try:
                     "color": "black"
                 }
             }
+
 
             # Render map
             st.pydeck_chart(pdk.Deck(
@@ -110,10 +138,7 @@ try:
 
             # Optional info
             st.caption(f"Showing {start_idx + 1}-{min(end_idx, total_properties)} of {total_properties} properties")
-            
-            
-            
-                        
+
         else:
             st.warning("⚠️ No data with valid coordinates.")
 
